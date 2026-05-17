@@ -15,7 +15,7 @@ test("A stamps B; A's passport shows 1/1 → 100%", async ({ browser, baseURL })
 
     await b.locator(".mesh-qrx-payload summary").click();
     const bp = (await b.locator(".mesh-qrx-payload code").textContent()) ?? "";
-    await a.getByPlaceholder("or paste a mesh:// payload").fill(bp);
+    await a.getByPlaceholder("or paste a payload (URL or mesh://)").fill(bp);
     await a.getByRole("button", { name: "use", exact: true }).click();
 
     await expect(a.locator(".pp-complete")).toBeVisible();
