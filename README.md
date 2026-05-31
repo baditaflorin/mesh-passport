@@ -1,7 +1,7 @@
 # mesh-passport
 
 [![pages](https://img.shields.io/badge/live-baditaflorin.github.io%2Fmesh-passport-fbbf24)](https://baditaflorin.github.io/mesh-passport/)
-[![version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/baditaflorin/mesh-passport/blob/main/package.json)
+[![version](https://img.shields.io/badge/version-0.1.1-blue)](https://github.com/baditaflorin/mesh-passport/blob/main/package.json)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 > Collect a stamp for every person in the room — completionist passport book
