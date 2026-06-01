@@ -10,8 +10,12 @@ const storagePrefix = pkg.name;
 test("A stamps B; A's passport shows 1/1 → 100%", async ({ browser, baseURL }) => {
   const { a, b, cleanup } = await openTwoPeers(browser, baseURL ?? "", { storagePrefix });
   try {
-    await a.getByPlaceholder("your name").fill("alice");
-    await b.getByPlaceholder("your name").fill("bob");
+    // The in-app help explains the core loop and the 2-tab try-it path; a
+    // newcomer should see it before doing anything.
+    await expect(a.locator(".pp-help")).toContainText("scan");
+
+    await a.getByPlaceholder("your name (so others know who stamped them)").fill("alice");
+    await b.getByPlaceholder("your name (so others know who stamped them)").fill("bob");
 
     await b.locator(".mesh-qrx-payload summary").click();
     const bp = (await b.locator(".mesh-qrx-payload code").textContent()) ?? "";
