@@ -89,11 +89,17 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
         </p>
       </header>
 
+      <p className="pp-help">
+        Meet people in the room — scan each other's QR to collect a stamp. Fill your passport when
+        you've met everyone. <strong>Try it:</strong> open this page in two tabs and scan one QR
+        with the other.
+      </p>
+
       <MeshNameInput
         className="viral-name"
         value={name}
         onChange={setName}
-        placeholder="your name"
+        placeholder="your name (so others know who stamped them)"
         maxLength={48}
       />
 
@@ -107,7 +113,7 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
       <section>
         <h2 className="viral-section-title">your collected stamps</h2>
         {myStamps.length === 0 ? (
-          <p className="viral-empty">no stamps yet</p>
+          <p className="viral-empty">no stamps yet — scan someone's QR above to collect one</p>
         ) : (
           <ul className="pp-grid">
             {myStamps.map((s) => (

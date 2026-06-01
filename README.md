@@ -22,11 +22,15 @@
 
 A **rootless-computing** peer-to-peer browser app. No backend of its own beyond the self-hosted WebRTC stack listed below. State lives in a Yjs mesh shared by everyone in the same room.
 
+A networking icebreaker: everyone in the room gets a passport. You and another person scan each other's QR to collect a stamp. Your passport is "complete" once you've met everyone present. A shared leaderboard ranks who's met the most people.
+
 Read the principles → **https://baditaflorin.github.io/rootless-computing/principles.html**
 
 ## Quickstart
 
-Open the live URL on two devices in the same room (set in ⚙ settings, or scan the room QR). Everything else is in-app.
+**Try it in 30 seconds:** open the live URL in two browser tabs. In one tab, expand "your passport QR"; copy its payload into the other tab's "paste a payload" box and hit **use**. The first tab's passport fills to 100% and both tabs' leaderboards update live.
+
+In a real room: open the live URL on two devices in the same room (set in ⚙ settings, or scan the room QR), type your name, and scan each other's QR. Everything else is in-app.
 
 For local hacking:
 
